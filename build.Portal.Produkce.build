@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<project name="DEMO.Portal.App" default="help" basedir=".">
+	<description>DEMO Portal Build script.</description>
+	<property name="verbose" value="true" unless="${property::exists('verbose')}"/>
+	<property name="ProjectName.CI" value="DEMO.Portal.App" overwrite="true"/>
+	<!-- GENERAL CCNET PROJECT PROPERTIES -->
+	<property name="Artifacts.dir" value="c:\CCNetSandBox\${ProjectName.CI}" verbose="${verbose}"/>
+	<property name="Artifacts.dir" value="${environment::get-variable('CCNetArtifactDirectory')}" if="${property::exists('CCNetArtifactDirectory')}"/>
+	<!-- Project working directory -->
+	<property name="Working.dir" value="${project::get-base-directory()}" verbose="${verbose}"/>
+	<property name="Working.dir" value="${environment::get-variable('CCNetWorkingDirectory')}" if="${property::exists('CCNetWorkingDirectory')}"/>
+	<property name="SvnName" value="DEMO"/>
+	<property name="build.major" value="1"/>
+	<property name="build.minor" value="0"/>
+	<property name="build.build" value="0"/>
+	<!--<property name="build.build" value= "${environment::get-variable('CCNetNumericLabel')}" if="${property::exists('CCNetNumericLabel')}"/>-->
+	<property name="svn.revision" value="0"/>
+	<include buildfile="settings.build"/>
+	<include buildfile="helpers.build"/>
+	<include buildfile="qa.build"/>
+	<include buildfile="compile.build"/>
+	<property name="BuildOutput.dir" value="${Artifacts.dir}\out"/>
+	<property name="ReleaseOutput.ftp.dir" value="${ReleaseOutput.ftp.dir}${ProjectName.CI}_PROD"/>
+	<property name="npm.source.folder" value="${Working.dir}\src\DEMO.Portal.Web\ClientApp"/>
+	<property name="npm.deploy.folder" value="\\srv-solweb01\iis-sites\DEMO\DEMO.Portal.Web"/>
+	<target name="npm.deploy" depends="get_revision">
+		<echo message="Setting application version"/>
+		<foreach item="File" property="config.js.file">
+			<in>
+				<items basedir="${Working.dir}\src\DEMO.Portal.Web\ClientApp\public\">
+					<include name="config.js*"/>
+					<exclude name="build\**"/>
+				</items>
+			</in>
+			<do>
+				<loadfile file="${config.js.file}" property="config.file.content" encoding="utf-8">
+					<filterchain>
+						<replacestring from="1.0.0.0" to="${full.version}" ignorecase="true"/>
+					</filterchain>
+				</loadfile>
+				<echo file="${config.js.file}">${config.file.content}</echo>
+			</do>
+		</foreach>
+		<echo message="Installing npm packages"/>
+		<exec program="pwsh" commandline='-NoProfile -ExecutionPolicy Bypass -Command "&amp;{npm ci}"' failonerror="true" workingdir="${npm.source.folder}"/>
+		<echo message="Audit npm audit fix"/>
+		<exec program="pwsh" commandline='-NoProfile -ExecutionPolicy Bypass -Command "&amp;{npm audit fix}"' failonerror="true" workingdir="${npm.source.folder}"/>
+		<echo message="Running npm build"/>
+		<exec program="pwsh" commandline='-NoProfile -ExecutionPolicy Bypass -Command "&amp;{npm run build}"' workingdir="${npm.source.folder}" failonerror="true"/>
+		<!-- <echo message="Deploying results to ${npm.deploy.folder}"/> -->
+		<move file="${Working.dir}\src\DEMO.Portal.Web\ClientApp\public\config.js.produkce" tofile="${npm.source.folder}\build\config.js" overwrite="true"/>
+		<call target="change_index"/>
+		<zipfileset basedir="${npm.source.folder}\build" id="release_content">
+			<exclude name="**\*.akceptace"/>
+			<exclude name="**\*.release"/>
+			<exclude name="**\*.produkce"/>
+			<include name="**\*"/>
+		</zipfileset>		
+		<zip zipfile="${ReleaseOutput.ftp.dir}\DEMO.Portal.Web.${full.version}.zip" includeemptydirs="true" ziplevel="9">
+			<fileset refid="release_content"/>
+		</zip>
+	</target>
+	
+	<target name="change_index">
+		<echo message="Changing index.html"/>
+		<loadfile file="${npm.source.folder}\build\index.html" property="index.html" encoding="utf-8">
+			<filterchain>
+				<replacestring from=".js" to=".js?version=${build.major}.${build.minor}.${build.build}.${svn.revision}" ignorecase="true" />
+				<replacestring from=".css" to=".css?version=${build.major}.${build.minor}.${build.build}.${svn.revision}" ignorecase="true" />
+			</filterchain>
+		</loadfile>
+		<echo file="${npm.source.folder}\build\index.html">${index.html}</echo>
+	</target>
+</project>

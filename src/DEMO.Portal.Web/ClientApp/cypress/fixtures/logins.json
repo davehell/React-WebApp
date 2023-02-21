@@ -1,0 +1,87 @@
+{
+  "bedan": {
+    "sso": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZWRhbiIsImp0aSI6IjFhMGZhY2Q5LTMwZjAtNGYwNS1hYzJjLWZiMmQwN2Y4YjFhMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMGUyMWQ2MDUtNjM4Ny00MjdiLTkwMDAtMmMxM2E5N2I0OTc1IiwiaXNzIjoiV2ViQXBpIn0.uSCpqTIc_a_1klI1TSevC47PkiN6LwOX_l7FPBoocCY"
+    },
+    "currentUser": {
+      "Id": 5,
+      "Username": "bedan"
+    },
+    "responsibilities": [],
+    "headOfOrgUnits": [],
+    "person": {
+    }
+  },
+  "hellebrand": {
+    "sso": {
+      "token": "abcd"
+    },
+    "currentUser": {
+      "Id": 246,
+      "Username": "hellebrand"
+    },
+    "responsibilities": [],
+    "headOfOrgUnits": [],
+    "person": {
+      "Id":36,
+      "LastName":"Hellebrand",
+      "PlainName":"Hellebrand David",
+      "OrganizationUnit":{
+        "Guid":"7917f0f4-13d1-4232-9516-356419dcf1da",
+        "Id":387,
+        "Name":"ELVAC SOLUTIONS s.r.o.",
+        "HierarchicalName":"ELVAC a.s./ELVAC SOLUTIONS s.r.o.",
+        "Head":{
+          "Id":190,
+          "PlainName":"Gryc Roman"
+        },
+        "ParentItem":{
+          "Guid":"5019ef66-c833-4f96-860d-4277a87e3bfd",
+          "Id":377,
+          "IdOriginal":"ELVAC a.s.",
+          "Name":"ELVAC a.s."
+        },
+        "OrganizationUnitType":{
+          "Guid":"2dffcc01-e99f-4a28-b5d1-5900a00c6365",
+          "IdOriginal":"Company",
+          "Name":"Společnost (firma)"
+        }
+      },
+      "EmployedBy":{
+        "Id":387,
+        "HierarchicalGuid":"5019ef66-c833-4f96-860d-4277a87e3bfd|7917f0f4-13d1-4232-9516-356419dcf1da"
+      },
+      "User":{
+        "Id":245,
+        "UserName":"hellebrand",
+        "Roles":[
+          {
+            "Code":"GUEST"
+          },
+          {
+            "Code":"ADMINISTRATOR"
+          },
+          {
+            "Code":"HOLIDAY_MANAGER"
+          }
+        ]
+      },
+      "Employee":{
+        "CanEditOwnAttendance":true,
+        "CanEditOwnWorklog":true,
+        "CanEditProjectCategories":true,
+        "Id":259,
+        "DefaultWorkType":{"Id":1,"Name":"PROJEKTANT"}
+      },
+      "Location":{
+        "HierarchicalGuid":"681d5eac-3774-4c8a-9c93-e0762f842fab|66a81c35-9637-4009-91c3-02c6f0a08e6c|cedee466-8e64-4318-89fa-db72dbd72e1a",
+        "Id":52,
+        "Name":"A214",
+        "AlarmZone":{
+          "Id":3,
+          "Name":"Zona03-ALSysAB1"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,288 @@
+/* https://tailwindcss-v0.netlify.app//docs/colors */
+
+/* barevné zvýraznění, pokud je na stránce vybrán jiný zaměstnanec, než je přilhášený uživatel */
+body.warning,
+body.warning #page {
+    background-color: #E3342F; /* red base */;
+}
+/* ikonky v alertu */
+.alert {
+    align-items: center; /* kvůli vertikálnímu zarovnání ikony a textu */
+    display: flex;
+}
+.alert i {
+    font-size: 150%;
+    margin-right: 10px;
+}
+.alert i + span {
+    margin-right: 25px;
+}
+/* barvy odkazů */
+a {
+    color: #3490dc;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: #1d68a7;
+    text-decoration: underline;
+}
+a.btn:hover {
+    text-decoration: none;
+}
+/* barva čáry */
+hr {
+    color: #DAE1E7; /* grey light */
+    opacity: 1;
+}
+/* tučná varianta fontu tam vypadá nepěkně */
+dt {
+    font-weight: normal;
+}
+/* vložení &nbsp - díky tomu nebude mít prázdný "dd" jinou velikost než "dd" obsahující text */
+dd::after {
+    content: '\00a0';
+}
+/* formulář - větší odsazení mezi řádky */
+.form-group {
+    margin-bottom: 1rem;
+}
+/* bootstrap - změna barvy muted textu */
+.text-muted {
+    color: #8795A1 !important; /* grey dark */
+}
+/* bootstrap - škaredý okraj u tlačítek, na které se kliklo */
+.btn {
+    box-shadow: none !important;
+}
+/* bootstrap - podtrhávání odkazů u link tlačítek */
+.btn-link {
+    text-decoration: none;
+}
+.btn-link:hover {
+    text-decoration: underline;
+}
+/* větší odsazení kolem ikon v tlačítku */
+.btn {
+    white-space: nowrap;
+}
+.btn i ~ span,
+.dx-button .dx-button-content i ~ span {
+    margin-left: 0.5rem;
+}
+.dx-button .dx-button-content {
+    padding: 4px;
+}
+.btn .badge {
+    margin-left: 0.5rem;
+}
+/* aby byl text stejně velký jako u bootstrapího .col-form-label */
+.dx-popup-content,
+.dx-radiobutton,
+.dx-checkbox {
+    font-size: 16px;
+}
+
+/* dxLookup s přidaným tlačítkem na mazání hodnoty - napozicování tlačítka na konec lookupu */
+.lookup-show-clear-button,
+.tagbox-show-clear-button {
+    position: relative;
+}
+.lookup-show-clear-button .dx-button,
+.tagbox-show-clear-button .dx-button {
+    border: none;
+    position: absolute;
+    right: 40px;
+    top: 4px;
+}
+.tagbox-show-clear-button .dx-button {
+    right: 10px;
+}
+.lookup-show-clear-button .dx-button.dx-state-hover,
+.tagbox-show-clear-button .dx-button.dx-state-hover {
+    background-color: transparent;
+}
+.lookup-show-clear-button .dx-icon-clear,
+.tagbox-show-clear-button .dx-icon-clear {
+    color: #99a1a8; /* dx barva */
+}
+
+/* barva nadpisu v kalendáři */
+.dx-calendar-navigator .dx-calendar-caption-button.dx-button .dx-button-content {
+    color: #212529; /* bootstrap body color */
+}
+/* barva tlačítek v kalendáři */
+.dx-calendar-navigator-previous-month.dx-button .dx-icon,
+.dx-calendar-navigator-previous-view.dx-button .dx-icon {
+    color: #3490DC; /* blue base */
+}
+.dx-calendar-cell.dx-calendar-selected-date,
+.dx-calendar-cell.dx-calendar-selected-date.dx-calendar-contoured-datetoday,
+.dx-calendar-cell.dx-calendar-selected-date.dx-calendar-contoured-date,
+.dx-calendar-cell.dx-calendar-selected-date.dx-calendar-contoured-date.dx-calendar-today,
+.dx-calendar-cell.dx-calendar-selected-date.dx-calendar-today
+{
+    -webkit-box-shadow: inset 0 0 0 1000px #3490DC; /* blue base */
+    box-shadow: inset 0 0 0 1000px #3490DC; /* blue base */
+}
+
+/* aby se nad disabled dxButton ukazoval hint (title) */
+.add-hint,
+.dx-button,
+.btn {  
+    pointer-events: auto;  
+}
+/* šedé pozadí pro dx alerty */
+.dx-overlay-shader {
+    background-color: rgba(0,0,0,.4);
+}
+/* datagrid - při pohybu myší nad řádkem změnit kurzor */
+.dx-widget:not(.no-pointer) .dx-data-row:not(.no-pointer).dx-state-hover:not(.dx-selection):not(.dx-row-inserted):not(.dx-row-removed):not(.dx-edit-row) td:not(.dx-focused) {
+    cursor: pointer;
+}
+/* datagrid, list - barva řádku při přejetí myši */
+.dx-datagrid-table .dx-data-row.dx-state-hover td,
+.dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-state-hover {
+    background-color: #EFF8FF !important; /*blue lightest*/
+}
+/* datagrid - barva neklikacích řádků při přejetí myši */
+.dx-datagrid-table .dx-data-row.dx-state-hover.no-pointer td {
+    background-color: #fff !important;
+}
+/* datagrid - nad editovatelnou buňkou změnit kurzor */
+.dx-datagrid-table .dx-data-row td.editable {
+    cursor: pointer;
+}
+/* datagrid - změna barvy editované buňky */
+.dx-datagrid-rowsview .dx-data-row .dx-cell-modified.dx-cell-modified::after,
+.dx-datagrid-rowsview .dx-data-row .dx-cell-modified.dx-datagrid-invalid::after {
+    border-color: #38C172; /* green base */
+}
+
+/* datagrid - odstranění zbytečného prázdného místa */
+.dx-datagrid .dx-freespace-row {
+    display: none !important;
+}
+
+/* datagrid - zvýraznění ikonky aktivního filtru */
+.dx-datagrid .dx-header-filter {
+    color: #e3342f;
+}
+.dx-datagrid .dx-header-filter.dx-header-filter-empty {
+    color: #8795A1;
+}
+
+/* datagrid - tmavší záhlaví */
+.dx-datagrid-headers {
+    color: #212529;
+    font-weight: bold;
+}
+.dx-datagrid-table .dx-header-row {
+    background-color: #DAE1E7; /*grey light*/
+}
+/* datagrid - mazaný řádek zvýraznit červeně (i pokud je nad ním kurzor) */
+.dx-datagrid-rowsview .dx-row-removed > td,
+.dx-datagrid-rowsview .dx-row-removed.dx-state-hover > td {
+    background-color: #FCEBEA !important; /* red lightest */
+    color: #000;
+}
+
+/* dx komponenty - stejný okraj jako u bootstrap nadpisů */
+.dx-datagrid,
+.dx-scheduler {
+    margin-bottom: 1rem;
+}
+
+/* zvýraznění aktuálního dne v buňce kalendáře */
+.dx-scheduler-date-table-cell.dx-scheduler-date-table-current-date div,
+.dx-scheduler-date-table-cell.dx-scheduler-date-table-current-date.dx-state-hover div {
+    color: #E3342F; /* red base */
+}
+/* zvýraznění aktuálního dne v záhlaví kalendáře */
+.dx-scheduler-header-panel-cell.dx-scheduler-header-panel-current-time-cell {
+    color: #E3342F; /* red base */
+}
+.dx-scheduler-header-panel-cell.dx-scheduler-header-panel-current-time-cell::before {
+    background-color: #E3342F; /* red base */
+}
+
+/* dx-textbox - světlejší barva pro okraj aktivního pole */
+.dx-texteditor.dx-state-active.dx-editor-filled, .dx-texteditor.dx-state-active.dx-editor-outlined, .dx-texteditor.dx-state-active.dx-editor-underlined, .dx-texteditor.dx-state-focused.dx-editor-filled, .dx-texteditor.dx-state-focused.dx-editor-outlined, .dx-texteditor.dx-state-focused.dx-editor-underlined {
+    border-color: #6CB2EB; /*blue ligth*/
+}
+/* dx-checkbox - světlejší barva pro okraj aktivního pole */
+.dx-checkbox.dx-state-hover .dx-checkbox-icon {
+    border-color: #6CB2EB; /*blue ligth*/
+}
+
+/* správná barva ikony vložené do dx tlačítka */
+.btn-primary .dx-icon {
+    color: #fff;
+}
+
+/* aby rozměry dropdown tlačítka byly stejné, jako u ostatních tlačítek */
+.dx-dropdownbutton.btn {
+    padding-left: 0;
+    padding-right: 0;
+}
+.dx-dropdownbutton.btn .dx-button {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+/* načítací kolečko */
+.dx-loadindicator * {
+    display: none;
+}
+.dx-loadindicator {
+    border: 3px solid #BCDEFA !important; /* blue lighter */
+    border-radius: 50%;
+    border-top: 3px solid #2779BD !important; /* blue dark */
+    width: 2.5em;
+    height: 2.5em;
+    animation: rotate-loading 1.5s linear infinite;
+}
+@keyframes rotate-loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* barvy alertů */
+.alert {
+    border: none;
+}
+.alert-success {
+    background-color: #E3FCEC; /* green lightest */
+    color: #1A4731; /* green darker */
+}
+.alert-success i {
+    color: #1F9D55; /* green dark */
+}
+.alert-danger {
+    background-color: #FCEBEA; /* red lightest */
+    color: #621B18; /* red darker */
+}
+.alert-danger i {
+    color: #CC1F1A; /* red dark */
+}
+.alert-warning {
+    background-color: #FCFBEB; /* yellow lightest */
+    color: #453411; /* yellow darker */
+}
+.alert-warning i {
+    color: #F2D024; /* yellow dark */
+}
+.alert-info {
+    background-color: #EFF8FF; /* blue lightest */
+    color: #12283A; /* blue darker */
+}
+.alert-info i {
+    color: #2779BD; /* blue dark */
+}
+.alert-secondary {
+    background-color: #F1F5F8; /* grey lighter */
+    color: #3D4852; /* grey darkest */
+}
+.alert-secondary i {
+    color: #606F7B; /* grey darker */
+}

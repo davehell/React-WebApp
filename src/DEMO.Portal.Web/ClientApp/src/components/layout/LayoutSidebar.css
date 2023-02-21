@@ -1,0 +1,236 @@
+html {
+    height: 100%;
+}
+body:not(.dx-viewport) {
+    background-color: #DAE1E7; /* grey - light */
+}
+
+/* horní pruh */
+#header {
+    align-items: center;
+    background-color: #12283A; /* blue darkest */
+    color: #fff;
+    display: flex;
+    font-size: 16px;
+    height: 70px;
+    padding: 0 25px 0 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+}
+#header .logo {
+    height: 70px;
+    padding-left: 15px;
+    padding-top: 10px;
+    text-align: left;
+}
+
+/* levý pruh */
+#sidebar {
+    background-color: #12283A; /* blue darkest */
+    bottom: 0;
+    overflow-y: auto;
+    padding: 75px 0 0; /* Height of header */
+    position: fixed;
+    top: 0;
+    width: 220px;
+    z-index: 100; /* Behind the header */
+}
+.compact #sidebar {
+    width: 50px;
+}
+#sidebar #btnToggleSidebar {
+    color: #fff;
+    position: absolute;
+    top: 75px;
+    right: 5px;
+}
+#sidebar #btnToggleSidebar:hover {
+    background-color: #1C3D5A; /* blue darker */
+}
+
+
+/* hlavní stránka  */
+#page,
+#pageWithoutSidebar {
+    background-color: #DAE1E7; /* grey - lighter */
+    margin: 0 0 0 220px;
+    padding-top: 95px; /* Height of header + top margin 25px*/
+}
+.dx-viewport #page, .dx-viewport #pageWithoutSidebar {
+    background-color: inherit;
+}
+#pageWithoutSidebar {
+    margin: 0;
+}
+.compact #page {
+    margin-left: 50px;
+}
+#page .container-fluid {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* sekce ve stránce */
+.section {
+    background-color: #fff;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: rgba(25, 25, 25, 0.05) 0px 2px 4px 0px, rgba(25, 25, 25, 0.05);
+}
+.dx-viewport .section {
+    background-color: inherit;
+}
+.section .section {
+    padding: 0;
+}
+
+/* hlavička sekce */
+.section .head {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #DAE1E7; /* grey light */
+    margin-bottom: 1rem;
+}
+.section .head.compact {
+    border: none;
+    margin-right: 2rem;
+}
+.section .head.compact ~ .dx-toolbar-item  {
+    vertical-align: top;
+}
+/* hlavička sekce - úvodní ikona */
+.section .head .icon {
+    border-radius: 4px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    background-color: #EFF8FF; /*blue lightest */
+    color: #3490DC; /* blue base */
+    background-color: #E6E8FF; /*indigo lightest */
+    color: #5661B3; /* indigo base */
+    text-align: center;
+    vertical-align: middle;
+    font-size: 120%;
+    margin-right: 15px;
+}
+.section .head.compact .icon {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+}
+/* hlavička sekce - nadpis */
+.section .head .title,
+.dx-toolbar-label  {
+    line-height: 50px;
+}
+.section .head.compact .title {
+    line-height: 40px;
+}
+.dx-popup-title {
+    height: 60px;
+}
+/* hlavička sekce - akční tlačítka */
+.section .head .actions  {
+    margin-left: 2rem;
+    flex-grow: 1;
+}
+.section .head .actions .dx-button,
+.dx-popup-title .dx-toolbar-before .dx-toolbar-button .dx-button {
+    border: none;
+    color: #3490DC; /* blue base */
+    margin: 0 0.5rem;
+}
+.section .head .actions .dx-button .dx-icon,
+.dx-popup-title .dx-toolbar-before .dx-toolbar-button .dx-button .dx-icon {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    color: #3490DC; /* blue base */
+}
+.section .head .actions .dx-button .dx-button-content span,
+.dx-popup-title .dx-toolbar-before .dx-toolbar-button .dx-button .dx-button-content span {
+    margin: 0 auto;
+}
+.section .head .actions .dx-button.dx-state-focused,
+.dx-popup-title .dx-toolbar-before .dx-toolbar-button .dx-button.dx-state-focused {
+    background-color: inherit;
+}
+.section .head .actions .dx-button.dx-state-hover,
+.section .head .actions .dx-button.dx-state-hover .dx-icon,
+.dx-popup-title .dx-toolbar-before .dx-toolbar-button .dx-button.dx-state-hover,
+.dx-popup-title .dx-toolbar-before .dx-toolbar-button .dx-button.dx-state-hover .dx-icon {
+    text-decoration: none;
+    color: #E3342F; /* red base */
+    background-color: inherit;
+}
+/* hlavička sekce - vyhledávací box */
+.section .head .searchBox {
+    height: 35px;
+    margin-top: 5px;
+    width: 400px;
+}
+
+/* horní navigace */
+#header .nav-link {
+    color: #fff;
+    min-width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.5rem 5px;
+    margin: 0 0.25rem;
+    height: 69px; /* O 1px mensí než header. Jinak v chrome při hover o ten 1px přesahovalo přes header až do stránky */
+}
+#header .nav-link:hover {
+    background-color: #1C3D5A; /* blue darker */
+    text-decoration: none;
+}
+
+/* boční navigace */
+#sidebar ul.nav li {
+    display: block;
+    width: 100%;
+}
+#sidebar ul.nav li:not(.divider):hover {
+    background-color: #1C3D5A; /* blue darker */
+}
+#sidebar ul.nav li.divider {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #4d8af0; /*ripley ui */
+}
+.compact #sidebar ul.nav li.divider span {
+    display: none;   
+}
+#sidebar .nav-link {
+    border-left: 5px solid transparent;
+    color: #fff; 
+    line-height: 30px;
+    padding-left: 5px;
+}
+#sidebar .nav-link.active {
+    border-color: #4d8af0; /*ripley ui */
+    font-weight: 600;
+}
+#sidebar .nav-link:hover {
+    text-decoration: none;
+}
+.compact #sidebar .nav-link span {
+    display: none;
+}
+#sidebar .nav-link i {
+    color: #fff;
+    font-size: 120%;
+    margin-right: 5px;
+    text-align: center;
+    width: 30px;
+}
+#sidebar .nav-link i.noIcon {
+    width: 0;
+}

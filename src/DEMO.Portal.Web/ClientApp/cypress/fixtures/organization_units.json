@@ -1,0 +1,827 @@
+{
+    "value": [
+      {
+        "Guid": "59567553-724a-4983-bf1b-f73e23b24dcf",
+        "Id": 360,
+        "Name": "Contaduria s.r.o.",
+        "HierarchicalGuid": "a909a7ba-d1f4-4eb4-a829-628cfb3bf7f5|59567553-724a-4983-bf1b-f73e23b24dcf",
+        "OrganizationUnitType": {
+          "Id": 1,
+          "IdOriginal": "Company"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "a909a7ba-d1f4-4eb4-a829-628cfb3bf7f5",
+          "Id": 347,
+          "Name": "GANSA a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 33,
+          "PlainName": "Šalplachta Martin"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "b7bdea94-2853-4a24-b03c-ac222901cd27",
+        "Id": 384,
+        "Name": "Contaduria s.r.o. (FM)",
+        "HierarchicalGuid": "a909a7ba-d1f4-4eb4-a829-628cfb3bf7f5|59567553-724a-4983-bf1b-f73e23b24dcf|b7bdea94-2853-4a24-b03c-ac222901cd27",
+        "OrganizationUnitType": {
+          "Id": 6,
+          "IdOriginal": "Division"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "59567553-724a-4983-bf1b-f73e23b24dcf",
+          "Id": 360,
+          "Name": "Contaduria s.r.o."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 33,
+          "PlainName": "Šalplachta Martin"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "6f28ebc4-045f-49c7-99d5-c5b1a9043b14",
+        "Id": 385,
+        "Name": "Contaduria s.r.o. (Třinec)",
+        "HierarchicalGuid": "a909a7ba-d1f4-4eb4-a829-628cfb3bf7f5|59567553-724a-4983-bf1b-f73e23b24dcf|6f28ebc4-045f-49c7-99d5-c5b1a9043b14",
+        "OrganizationUnitType": {
+          "Id": 6,
+          "IdOriginal": "Division"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "59567553-724a-4983-bf1b-f73e23b24dcf",
+          "Id": 360,
+          "Name": "Contaduria s.r.o."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 33,
+          "PlainName": "Šalplachta Martin"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "07db43b2-2b3f-4ae4-b4dc-aa6ea1f46009",
+        "Id": 356,
+        "Name": "DENESA s.r.o.",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|07db43b2-2b3f-4ae4-b4dc-aa6ea1f46009",
+        "OrganizationUnitType": {
+          "Id": 1,
+          "IdOriginal": "Company"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+          "Id": 338,
+          "Name": "ELVAC a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 9,
+          "PlainName": "Průdek Tomáš"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "6e7f6f17-961e-45c7-bf91-691a4375068c",
+        "Id": 355,
+        "Name": "div. Mechatronika",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|6e7f6f17-961e-45c7-bf91-691a4375068c",
+        "OrganizationUnitType": {
+          "Id": 6,
+          "IdOriginal": "Division"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+          "Id": 338,
+          "Name": "ELVAC a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 137,
+          "PlainName": "Šelong Dušan"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "fcf403d6-797a-4d4c-85b2-f411383b1b56",
+        "Id": 352,
+        "Name": "div. Obchod",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|fcf403d6-797a-4d4c-85b2-f411383b1b56",
+        "OrganizationUnitType": {
+          "Id": 6,
+          "IdOriginal": "Division"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+          "Id": 338,
+          "Name": "ELVAC a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 7,
+          "PlainName": "Chýlek Jaroslav"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "a2845f20-8b6b-4ba8-b668-84516cdffdc4",
+        "Id": 354,
+        "Name": "div. Provoz",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|a2845f20-8b6b-4ba8-b668-84516cdffdc4",
+        "OrganizationUnitType": {
+          "Id": 6,
+          "IdOriginal": "Division"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+          "Id": 338,
+          "Name": "ELVAC a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 40,
+          "PlainName": "Drozdek Jaromír"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "1099733f-04ab-45e7-8c5e-912ca83f0105",
+        "Id": 353,
+        "Name": "div. Systémy pro energetiku",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|1099733f-04ab-45e7-8c5e-912ca83f0105",
+        "OrganizationUnitType": {
+          "Id": 6,
+          "IdOriginal": "Division"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+          "Id": 338,
+          "Name": "ELVAC a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 14,
+          "PlainName": "Kocur Miroslav"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+        "Id": 338,
+        "Name": "ELVAC a.s.",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+        "OrganizationUnitType": {
+          "Id": 1,
+          "IdOriginal": "Company"
+        },
+        "ParentItem": null,
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 21,
+          "PlainName": "Ciompa Zbyšek"
+        },
+        "DeputyHead": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 7,
+          "PlainName": "Chýlek Jaroslav"
+        }
+      },
+      {
+        "Guid": "d9677651-14ec-4cf6-bc4b-80c8bc385e66",
+        "Id": 348,
+        "Name": "ELVAC EKOTECHNIKA s.r.o.",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|d9677651-14ec-4cf6-bc4b-80c8bc385e66",
+        "OrganizationUnitType": {
+          "Id": 1,
+          "IdOriginal": "Company"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+          "Id": 338,
+          "Name": "ELVAC a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 309,
+          "PlainName": "Kania Ondřej"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "73ae24df-0d81-410c-8b1d-ea7c47dfc7d5",
+        "Id": 349,
+        "Name": "ELVAC SK s.r.o.",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|73ae24df-0d81-410c-8b1d-ea7c47dfc7d5",
+        "OrganizationUnitType": {
+          "Id": 1,
+          "IdOriginal": "Company"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+          "Id": 338,
+          "Name": "ELVAC a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 59,
+          "PlainName": "Gajdúšek Michal"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "8a92547d-cf3b-4dd0-8b21-1e2b69f329d8",
+        "Id": 350,
+        "Name": "ELVAC SOLUTIONS s.r.o.",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|8a92547d-cf3b-4dd0-8b21-1e2b69f329d8",
+        "OrganizationUnitType": {
+          "Id": 1,
+          "IdOriginal": "Company"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "723a6d4c-99cb-46f6-b400-ce660e5b17de",
+          "Id": 338,
+          "Name": "ELVAC a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 35,
+          "PlainName": "Gryc Roman"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "a909a7ba-d1f4-4eb4-a829-628cfb3bf7f5",
+        "Id": 347,
+        "Name": "GANSA a.s.",
+        "HierarchicalGuid": "a909a7ba-d1f4-4eb4-a829-628cfb3bf7f5",
+        "OrganizationUnitType": {
+          "Id": 1,
+          "IdOriginal": "Company"
+        },
+        "ParentItem": null,
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 17,
+          "PlainName": "Gříbek Čestmír"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "766d439f-5eec-4cd2-baa3-b114ca26357c",
+        "Id": 361,
+        "Name": "GANSA AUTO MOTO s.r.o.",
+        "HierarchicalGuid": "a909a7ba-d1f4-4eb4-a829-628cfb3bf7f5|766d439f-5eec-4cd2-baa3-b114ca26357c",
+        "OrganizationUnitType": {
+          "Id": 1,
+          "IdOriginal": "Company"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "a909a7ba-d1f4-4eb4-a829-628cfb3bf7f5",
+          "Id": 347,
+          "Name": "GANSA a.s."
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 17,
+          "PlainName": "Gříbek Čestmír"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "e36bf5f8-5615-49d8-a334-42d293d3a85e",
+        "Id": 372,
+        "Name": "odd. IT div. Provoz",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|a2845f20-8b6b-4ba8-b668-84516cdffdc4|e36bf5f8-5615-49d8-a334-42d293d3a85e",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "a2845f20-8b6b-4ba8-b668-84516cdffdc4",
+          "Id": 354,
+          "Name": "div. Provoz"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 5,
+          "PlainName": "Bedaň Daniel"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "554ca92a-259a-4dd3-8e8c-49d9bd21fa8d",
+        "Id": 362,
+        "Name": "odd. Komunikace  div. Obchod",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|fcf403d6-797a-4d4c-85b2-f411383b1b56|554ca92a-259a-4dd3-8e8c-49d9bd21fa8d",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "fcf403d6-797a-4d4c-85b2-f411383b1b56",
+          "Id": 352,
+          "Name": "div. Obchod"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 16,
+          "PlainName": "Kahánek Michal"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "b5f4775d-f8bf-46df-a5cb-a6545621605a",
+        "Id": 382,
+        "Name": "odd. Konstrukce rozvaděčů div. Mechatronika",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|6e7f6f17-961e-45c7-bf91-691a4375068c|b5f4775d-f8bf-46df-a5cb-a6545621605a",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "6e7f6f17-961e-45c7-bf91-691a4375068c",
+          "Id": 355,
+          "Name": "div. Mechatronika"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 145,
+          "PlainName": "Kmeť Petr"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "c25aad3e-2a7b-4a3b-9a49-9e841ee1ab7e",
+        "Id": 377,
+        "Name": "odd. Konstrukce strojní div. Mechatronika",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|6e7f6f17-961e-45c7-bf91-691a4375068c|c25aad3e-2a7b-4a3b-9a49-9e841ee1ab7e",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "6e7f6f17-961e-45c7-bf91-691a4375068c",
+          "Id": 355,
+          "Name": "div. Mechatronika"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 113,
+          "PlainName": "Ovádek Josef"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "48f466cd-5c3e-4d8e-b0cb-908f59e914b9",
+        "Id": 368,
+        "Name": "odd. Marketing div. Obchod",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|fcf403d6-797a-4d4c-85b2-f411383b1b56|48f466cd-5c3e-4d8e-b0cb-908f59e914b9",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "fcf403d6-797a-4d4c-85b2-f411383b1b56",
+          "Id": 352,
+          "Name": "div. Obchod"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 169,
+          "PlainName": "Slunský Petr"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "66035b0c-1451-4bb9-a4b1-8feb000a5f57",
+        "Id": 378,
+        "Name": "odd. Nákup a logistika div. Mechatronika",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|6e7f6f17-961e-45c7-bf91-691a4375068c|66035b0c-1451-4bb9-a4b1-8feb000a5f57",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "6e7f6f17-961e-45c7-bf91-691a4375068c",
+          "Id": 355,
+          "Name": "div. Mechatronika"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 284,
+          "PlainName": "Pobucký Michal"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "3c26115e-9f31-4086-84b5-9e64cce78e89",
+        "Id": 367,
+        "Name": "odd. Nákup div. Obchod",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|fcf403d6-797a-4d4c-85b2-f411383b1b56|3c26115e-9f31-4086-84b5-9e64cce78e89",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "fcf403d6-797a-4d4c-85b2-f411383b1b56",
+          "Id": 352,
+          "Name": "div. Obchod"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 160,
+          "PlainName": "Křižáková Jana"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "171fd001-50f5-4740-842a-8d23fe3d9ec9",
+        "Id": 376,
+        "Name": "odd. Obchod div. Mechatronika",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|6e7f6f17-961e-45c7-bf91-691a4375068c|171fd001-50f5-4740-842a-8d23fe3d9ec9",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "6e7f6f17-961e-45c7-bf91-691a4375068c",
+          "Id": 355,
+          "Name": "div. Mechatronika"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 144,
+          "PlainName": "Piskala Petr"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "76439b09-4c02-4cc5-afa3-ce340f26fe90",
+        "Id": 380,
+        "Name": "odd. Projekce div. Mechatronika",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|6e7f6f17-961e-45c7-bf91-691a4375068c|76439b09-4c02-4cc5-afa3-ce340f26fe90",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "6e7f6f17-961e-45c7-bf91-691a4375068c",
+          "Id": 355,
+          "Name": "div. Mechatronika"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 115,
+          "PlainName": "Darda Michal"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "51d6ec6c-c239-4118-b463-b7af9257f1ad",
+        "Id": 379,
+        "Name": "odd. Projektový management div. Mechatronika",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|6e7f6f17-961e-45c7-bf91-691a4375068c|51d6ec6c-c239-4118-b463-b7af9257f1ad",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "6e7f6f17-961e-45c7-bf91-691a4375068c",
+          "Id": 355,
+          "Name": "div. Mechatronika"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 137,
+          "PlainName": "Šelong Dušan"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "457ad603-5610-4c00-a671-bb7ea4276619",
+        "Id": 365,
+        "Name": "odd. Průmyslové počítače div. Obchod",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|fcf403d6-797a-4d4c-85b2-f411383b1b56|457ad603-5610-4c00-a671-bb7ea4276619",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "fcf403d6-797a-4d4c-85b2-f411383b1b56",
+          "Id": 352,
+          "Name": "div. Obchod"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 60,
+          "PlainName": "Musil Bronislav"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "8bf52037-03bc-470e-b74f-82e556db43a9",
+        "Id": 381,
+        "Name": "odd. Řídicí systémy div. Mechatronika",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|6e7f6f17-961e-45c7-bf91-691a4375068c|8bf52037-03bc-470e-b74f-82e556db43a9",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "6e7f6f17-961e-45c7-bf91-691a4375068c",
+          "Id": 355,
+          "Name": "div. Mechatronika"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 277,
+          "PlainName": "Mikeš Karel"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "202d3d89-2e74-49b1-8475-bdd18e0880ee",
+        "Id": 373,
+        "Name": "odd. Sekretariát div. Provoz",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|a2845f20-8b6b-4ba8-b668-84516cdffdc4|202d3d89-2e74-49b1-8475-bdd18e0880ee",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "a2845f20-8b6b-4ba8-b668-84516cdffdc4",
+          "Id": 354,
+          "Name": "div. Provoz"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 275,
+          "PlainName": "Vrublová Petra"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "dd770c37-faf0-4aaa-bd6b-28ed0c3a57e2",
+        "Id": 375,
+        "Name": "odd. Servis a TP div. Provoz",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|a2845f20-8b6b-4ba8-b668-84516cdffdc4|dd770c37-faf0-4aaa-bd6b-28ed0c3a57e2",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "a2845f20-8b6b-4ba8-b668-84516cdffdc4",
+          "Id": 354,
+          "Name": "div. Provoz"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 15,
+          "PlainName": "Menšík Jiří"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "3c445b3a-ce57-4307-b765-553395906049",
+        "Id": 363,
+        "Name": "odd. Sklad  div. Obchod",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|fcf403d6-797a-4d4c-85b2-f411383b1b56|3c445b3a-ce57-4307-b765-553395906049",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "fcf403d6-797a-4d4c-85b2-f411383b1b56",
+          "Id": 352,
+          "Name": "div. Obchod"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 28,
+          "PlainName": "Humplík David"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "2cb92819-2aaf-4080-86bd-fd0a4d099da1",
+        "Id": 371,
+        "Name": "odd. TP a realizace zakázek div. SpE",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|1099733f-04ab-45e7-8c5e-912ca83f0105|2cb92819-2aaf-4080-86bd-fd0a4d099da1",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "1099733f-04ab-45e7-8c5e-912ca83f0105",
+          "Id": 353,
+          "Name": "div. Systémy pro energetiku"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 92,
+          "PlainName": "Kuruc Marian"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "381a5237-3f48-49b2-b8fa-edb948227f38",
+        "Id": 366,
+        "Name": "odd. Velkoobchod elektro div. Obchod",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|fcf403d6-797a-4d4c-85b2-f411383b1b56|381a5237-3f48-49b2-b8fa-edb948227f38",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "fcf403d6-797a-4d4c-85b2-f411383b1b56",
+          "Id": 352,
+          "Name": "div. Obchod"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 25,
+          "PlainName": "Zuzaňák Luděk"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "4e0948d7-6240-4c03-ba38-5a557e9d4b8b",
+        "Id": 369,
+        "Name": "odd. Výroba elektroniky div. SpE",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|1099733f-04ab-45e7-8c5e-912ca83f0105|4e0948d7-6240-4c03-ba38-5a557e9d4b8b",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "1099733f-04ab-45e7-8c5e-912ca83f0105",
+          "Id": 353,
+          "Name": "div. Systémy pro energetiku"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 90,
+          "PlainName": "Wajda Jaromír"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "0429fde4-1661-4dfb-89c5-fb3ed4bc96b9",
+        "Id": 374,
+        "Name": "odd. Výroba IPC div. Provoz",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|a2845f20-8b6b-4ba8-b668-84516cdffdc4|0429fde4-1661-4dfb-89c5-fb3ed4bc96b9",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "a2845f20-8b6b-4ba8-b668-84516cdffdc4",
+          "Id": 354,
+          "Name": "div. Provoz"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 23,
+          "PlainName": "Giecek Jiří"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "91e0f66b-c215-4d28-9d4c-43208b8417e1",
+        "Id": 383,
+        "Name": "odd. Výroba rozvaděčů div. Mechatronika",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|6e7f6f17-961e-45c7-bf91-691a4375068c|91e0f66b-c215-4d28-9d4c-43208b8417e1",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "6e7f6f17-961e-45c7-bf91-691a4375068c",
+          "Id": 355,
+          "Name": "div. Mechatronika"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 155,
+          "PlainName": "Pojezdala Anton"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "a84b508a-42ed-43bf-8e42-1eaf97b94c9b",
+        "Id": 370,
+        "Name": "odd. Vývoj div. SpE",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|1099733f-04ab-45e7-8c5e-912ca83f0105|a84b508a-42ed-43bf-8e42-1eaf97b94c9b",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "1099733f-04ab-45e7-8c5e-912ca83f0105",
+          "Id": 353,
+          "Name": "div. Systémy pro energetiku"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 70,
+          "PlainName": "Kordas Jan"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "8138af91-ed29-4055-b5fb-09bd26544d25",
+        "Id": 3,
+        "Name": "Organizační jednotka A",
+        "HierarchicalGuid": "8138af91-ed29-4055-b5fb-09bd26544d25",
+        "OrganizationUnitType": null,
+        "ParentItem": null,
+        "Head": null,
+        "DeputyHead": null
+      },
+      {
+        "Guid": "27191478-c650-40f7-89cc-33831091fd1e",
+        "Id": 4,
+        "Name": "Organizační jednotka B",
+        "HierarchicalGuid": "27191478-c650-40f7-89cc-33831091fd1e",
+        "OrganizationUnitType": null,
+        "ParentItem": null,
+        "Head": null,
+        "DeputyHead": null
+      },
+      {
+        "Guid": "1aacd623-983d-45f2-8d67-0004857baa7f",
+        "Id": 358,
+        "Name": "PROMEDIA - Světelné reklamy a.s.",
+        "HierarchicalGuid": "1aacd623-983d-45f2-8d67-0004857baa7f",
+        "OrganizationUnitType": {
+          "Id": 1,
+          "IdOriginal": "Company"
+        },
+        "ParentItem": null,
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 101,
+          "PlainName": "Faldyna Patrik"
+        },
+        "DeputyHead": null
+      },
+      {
+        "Guid": "1b626685-f32f-4382-bfc5-1eac6aa81cd5",
+        "Id": 364,
+        "Name": "RC Praha div. Obchod",
+        "HierarchicalGuid": "723a6d4c-99cb-46f6-b400-ce660e5b17de|fcf403d6-797a-4d4c-85b2-f411383b1b56|1b626685-f32f-4382-bfc5-1eac6aa81cd5",
+        "OrganizationUnitType": {
+          "Id": 3,
+          "IdOriginal": "Department"
+        },
+        "ParentItem": {
+          "@odata.type": "#ELVAC.ELIN.ODataApi.OrganizationUnit",
+          "Guid": "fcf403d6-797a-4d4c-85b2-f411383b1b56",
+          "Id": 352,
+          "Name": "div. Obchod"
+        },
+        "Head": {
+          "@odata.type": "#ELVAC.ELIN.Model.ContactManagement.Person",
+          "Id": 132,
+          "PlainName": "Dorko Miroslav"
+        },
+        "DeputyHead": null
+      }
+    ]
+  }

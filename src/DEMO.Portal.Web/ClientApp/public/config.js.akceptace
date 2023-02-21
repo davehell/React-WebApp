@@ -1,0 +1,5 @@
+var Configs = {
+    "ODATA_Debug": "https://localhost:5001/odata/",
+    "ODATA_Production": "https://localhost:5001/odata/",
+    "VersionApp": "1.0.0.0",
+}

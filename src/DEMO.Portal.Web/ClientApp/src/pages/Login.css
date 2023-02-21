@@ -1,0 +1,33 @@
+/* přihlašovací stránka */
+body.Login {
+    background: radial-gradient(ellipse at center, #2779BD 0%, #0e1627 100%);
+}
+body.Login .row {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+body.Login .formWrapper {
+    text-align: center;
+    width: 500px;
+}
+body.Login form {
+    background-color: #fff;
+    padding: 2rem  3rem;
+}
+body.Login form img {
+    margin-bottom: 1rem;
+}
+
+body.Login #version {
+    display: block;
+    margin-bottom: -1.5rem;
+    margin-right: -2.5rem;
+    text-align: right;
+}

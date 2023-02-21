@@ -1,0 +1,376 @@
+/* personsDataGrid */
+/* aby dlouhé texty nerozbily layout sloupců */
+#personsDataGrid * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* tablo - aby byly jednotlivé fotky vedle sebe */
+#personsDataGrid.tablo tbody.dx-data-row {
+    float: left;
+}
+/* skrytí prázdného místa nad gridem */
+#personsDataGrid .dx-datagrid-headers {
+    display: none;
+}
+/*  seznam kontaktů */
+#personsDataGrid .dx-row p,
+#personsDataGrid .dx-row ul {
+    margin-bottom: 0;
+}
+#personsDataGrid .dx-row ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+#personsDataGrid ul i.far {
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
+}
+/* barevný pruh Přítomnost */
+#personsDataGrid .availability {
+    border-left: 8px solid transparent;
+}
+#personsDataGrid .availability.Unavailable {
+    border-color:#E3342F; /* red base */
+}
+#personsDataGrid .availability.Workplace {
+    border-color: #38C172; /* green base */
+}
+#personsDataGrid .availability.WorkingAwayFromWorkplace {
+    border-color: #FFED4A; /* yellow base */
+}
+#personsDataGrid.tablo .img-thumbnail.availability {
+    border-radius: 0;
+    border-top-color: #dee2e6;
+    border-right-color: #dee2e6;
+    border-bottom-color: #dee2e6;
+    border-left-width: 3px;
+}
+/* aby se uplatnila výška zadaná v HTML a ne výška z bootstrap třídy .img-thumbnail */
+#personsDataGrid.tablo .img-thumbnail {
+    height: revert-layer;
+}
+
+/* linka pod řádkem (jen v seznamu) */
+#personsDataGrid:not(.tablo) .dx-data-row td {
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* skrytí prázdného řádku, který se zobrazuje během načítání záznamů pro virtuální scrollování */
+#personsDataGrid .dx-virtual-row {
+    visibility: hidden;
+}
+
+/* struktura oddělení */
+#btnShowAllContainer {
+    padding-right: 2rem;
+    text-align: right;
+}
+
+/* výkaz práce - otočené popisky sloupců v záhlaví gridu */
+/* #worksheetAttendanceDataGrid .dx-row.dx-header-row td {
+    transform: rotate(-45deg);
+    transform-origin: bottom right;
+    height: 100px;
+} */
+
+/* zápis dovolené - v editačním formuláři zadávací pole orámovat červeně (Chýlkův požadavek - v K2 to tak taky je) */
+#attendaceEditForm.edit .dx-texteditor.dx-editor-outlined,
+.addBtnClicked #attendaceEditForm .dx-texteditor.dx-editor-outlined {
+    border-color: #F9ACAA; /* red lighter */
+}
+
+/* výkaz práce - kompaktní zobrazení tabulky */
+#worksheetAttendanceDataGrid .dx-datagrid .dx-row > td,
+#worksheetProjectsDataGrid .dx-datagrid .dx-row > td {
+    padding: 2px 4px !important;
+}
+/* výkaz práce - aby kvůli boolean zatržítek nebyl řádek moc vysoký */
+#worksheetAttendanceDataGrid .dx-editor-cell.dx-editor-inline-block:not(.dx-command-select)::before {
+    padding: 0 !important;
+}
+/* person scheduler */
+/* nízké řádky */
+#personScheduler .dx-scheduler-work-space-month .dx-scheduler-cell-sizes-vertical {
+    height: 100px!important; /* 50 je nejnižší možná hodnota */
+}
+#personScheduler .dx-scheduler-work-space-week .dx-scheduler-cell-sizes-vertical {
+    height: 30px!important;
+}
+/* agenda - velikosti chlívků */
+#personScheduler .dx-scheduler-agenda .dx-scheduler-appointment {
+    padding: 0;
+}
+#personScheduler .dx-scheduler-agenda .dx-scheduler-appointment .Attendance,
+#personScheduler .dx-scheduler-agenda .dx-scheduler-appointment .PlannedAttendance {
+    width: 100%;
+    padding: 5px;
+}
+/* v měsíci jednořádkové zobrazení schůzky */
+#personScheduler .dx-scheduler-appointment .detail {
+    display: none;
+}
+/* v agendě dvojřádkové zobrazení schůzky */
+#personScheduler .dx-scheduler-agenda .dx-scheduler-appointment .detail {
+    display: block;
+}
+
+/* start of compact */
+
+/* attendace scheduler */
+/* nezobrazovat u týdeních timeline v záhlavi řádek s hodinami */
+#attendaceOverviewScheduler .dx-scheduler-timeline-week .dx-scheduler-header-panel-cell:not(.dx-scheduler-header-panel-week-cell) {
+    display: none;
+    visibility: hidden;
+}
+/* úzké sloupce, aby se na obrazovku vešel celý měsíc */
+#attendaceOverviewScheduler .dx-scheduler-timeline-month .dx-scheduler-cell-sizes-horizontal {
+    width: 32px!important;
+}
+#attendaceOverviewScheduler .dx-scheduler-timeline-week .dx-scheduler-cell-sizes-horizontal {
+    width: 142px!important;
+}
+/* nízké řádky */
+#attendaceOverviewScheduler .dx-scheduler-timeline .dx-scheduler-group-header,
+#attendaceOverviewScheduler .dx-scheduler-timeline .dx-scheduler-date-table .dx-scheduler-date-table-cell,
+#attendaceOverviewScheduler .dx-scheduler-timeline .dx-scheduler-date-table tbody {
+    min-height: 30px; 
+}
+#attendaceOverviewScheduler .dx-scheduler-cell-sizes-vertical {
+    height: 30px;
+}
+/* skrytí výchozích polí appointment, aby místo nich mohly být naše barevné */
+#attendaceOverviewScheduler .dx-scheduler-appointment {
+    background-color: transparent;
+
+}
+#attendaceOverviewScheduler .dx-scheduler-appointment.dx-state-focused:not(.dx-scheduler-appointment-drag-source)::before,
+#attendaceOverviewScheduler .dx-scheduler-timeline .dx-scheduler-appointment.dx-state-active {
+    background: none;
+}
+#attendaceOverviewScheduler .dx-scheduler-timeline .dx-scheduler-appointment,
+#attendaceOverviewScheduler .dx-scheduler-timeline .dx-scheduler-appointment.dx-state-hover,
+#attendaceOverviewScheduler .dx-scheduler-timeline .dx-scheduler-appointment.dx-state-active {
+    box-shadow: none;
+}
+
+/* nastavení barvy pro Attendance */
+.attendanceScheduler .dx-scheduler-appointment .Attendance {
+    background-color: #DE751F  !important; /* orange dark */
+    color: #fff;
+}
+.attendanceScheduler .dx-scheduler-appointment.dx-state-hover .Attendance {
+    background-color: #F6993F  !important; /* orange base */
+}
+/* nastavení barvy pro jednotlivé PlannedAttendance.PlannedPresenceType */
+.attendanceScheduler .dx-scheduler-appointment .PlannedAttendance.BusinessTrip {
+    background-color: #2779BD  !important; /* blue dark */
+    color: #fff;
+}
+.attendanceScheduler .dx-scheduler-appointment.dx-state-hover .PlannedAttendance.BusinessTrip {
+    background-color: #3490DC  !important; /* blue base */
+}
+.attendanceScheduler .dx-scheduler-appointment .PlannedAttendance.Holiday.Approved {
+    background-color: #1F9D55  !important; /* green dark */
+    color: #fff;
+}
+.attendanceScheduler .dx-scheduler-appointment.dx-state-hover .PlannedAttendance.Holiday.Approved {
+    background-color: #38C172  !important; /* green base */
+}
+.attendanceScheduler .dx-scheduler-appointment .PlannedAttendance.Holiday.Waiting {
+    background-color: #F2D024  !important; /* yellow dark */
+    color: #000;
+}
+.attendanceScheduler .dx-scheduler-appointment.dx-state-hover .PlannedAttendance.Holiday.Waiting {
+    background-color: #FFED4A  !important; /* yellow base */
+}
+/* rozměry buňek pro jednotlivé PlannedAttendance.PlannedPresenceType */
+.attendanceScheduler .dx-scheduler-work-space-month .dx-scheduler-appointment-content,
+.attendanceScheduler .dx-scheduler-work-space-week .dx-scheduler-all-day-appointment .dx-scheduler-appointment-content {
+    padding: 0 2px;
+}
+.attendanceScheduler .dx-scheduler-appointment,
+.attendanceScheduler .dx-scheduler-work-space-month .dx-scheduler-appointment,
+.attendanceScheduler .dx-scheduler-work-space-month .dx-scheduler-appointment.dx-state-hover,
+.attendanceScheduler .dx-scheduler-work-space-week .dx-scheduler-all-day-appointment .dx-scheduler-appointment.dx-state-hover {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
+.attendanceScheduler .dx-scheduler-appointment .PlannedAttendance,
+.attendanceScheduler .dx-scheduler-appointment .Attendance {
+    padding: 0 4px;
+}
+
+/* širší první sloupec se jménem */
+#attendaceOverviewScheduler .dx-scheduler-group-flex-container .dx-scheduler-group-row .dx-scheduler-group-header {
+    width: 200px;
+    padding-top: 5px;
+}
+/* posunutí jednotlivých appoitment výše, aby nad nimi nebylo zbytečné volné místo */
+#attendaceOverviewScheduler .dx-scheduler-appointment-content {
+    margin-top: -25px;
+    padding: 10px 0;
+}
+/* barvy buněk při hover */
+#attendaceOverviewScheduler .dx-scheduler-date-table-row:hover,
+#attendaceOverviewScheduler .dx-scheduler-date-table-cell:hover {
+    background-color: #EFF8FF !important; /* blue lightest */
+}
+#attendaceOverviewScheduler .dx-scheduler-date-table-row:hover .weekend {
+    background-color: #DAE1E7 !important; /* grey light */
+}
+#attendaceOverviewScheduler .dx-scheduler-date-table-row:hover .today {
+    background-color: #6CB2EB !important; /* blue light */
+}
+
+/* bílé pozadí tooltipu v kalendáři, když se na něj klikne */
+#attendaceOverviewScheduler .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-state-focused {
+    background-color:transparent;
+    color: #000;
+}
+/* barevné zvýraznění víkendových dní v kalendáři */
+#attendaceOverviewScheduler .dx-scheduler-header-panel-cell.weekend,
+#attendaceOverviewScheduler .dx-scheduler-date-table-cell.weekend {
+    background-color: #F1F5F8; /* grey lighter */
+}
+/* barevné zvýraznění aktuálního dne v kalendáři */
+#attendaceOverviewScheduler .dx-scheduler-date-table-cell.today {
+    background-color: #BCDEFA; /* blue lighter */
+}
+/* skrytí buněk v záhlaví, dokud se v nich v onContentReady neupraví obsah - aby tam škaredě neproblikával původní obsah */
+#attendaceOverviewScheduler th.dx-scheduler-header-panel-cell:not(.text-updated) {
+    visibility: hidden;
+}
+/* skrytí čáry ukazující aktuální čas (tu nepotřebujeme, stačí nám jen třída v záhlaví tabulky označující aktuální den) */
+#attendaceOverviewScheduler .dx-scheduler-date-time-indicator {
+    display: none;
+}
+
+/* end of compact */
+/* aby alert žádná data byl stejně široký jako komponenta kalendáře */
+.alert.attendanceScheduler {
+    width: 1200px;
+}
+/* aby filtr na organizace byl stejně široký jako komponenta kalendáře */
+.organizationFilter {
+    max-width: 1200px;
+}
+
+/* edos statistika */
+.statistics h6 {
+    padding: 4px;
+}
+.statistics dt,
+.statistics dd {
+    height: 24px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 4px;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+.statistics .bg-secondary {
+    background-color: #F1F5F8 !important; /* grey lighter */
+}
+.statistics .bg-success {
+    background-color: #38C172 !important; /* green base */
+}
+/* evidence práce - aby byl kalendář ve středu sloupce. Nevypadá pak tak blbě, že je sloupec zbytečně široký */
+#worklogsCalendar {
+    margin: 0 auto;
+}
+/* evidence práce - zmenšení kalendáře */
+#worklogsCalendar.dx-calendar {
+    min-width: 200px;
+    width: 200px;
+}
+#worklogsCalendar .dx-calendar-cell {
+    padding: 4px;
+    width: 20px;
+}
+/* evidence práce - skrytí mazacích tlačítek, pokud už grid obsahuje přidaný, upravený nebo smazaný záznam */
+#edosAttendanceSection.datagrid-modified .dx-datagrid .dx-link-delete,
+#edosWorklogSection.datagrid-modified .dx-datagrid .dx-link-delete {
+    display: none !important;
+}
+/* evidence práce - skrytí toolbaru s ukládacími tlačítky */
+#edosAttendanceSection .dx-datagrid-header-panel,
+#edosWorklogSection .dx-datagrid-header-panel {
+    display: none;
+}
+/* evidence práce - zobrazení vlastních ukládacích tlačítek, pokud je grid v editovaném stavu */
+#edosAttendanceSection:not(.datagrid-modified) .hiddenIfNotModified,
+#edosWorklogSection:not(.datagrid-modified) .hiddenIfNotModified {
+    display: none;
+}
+#edosAttendanceSection.datagrid-modified .hiddenIfModified, 
+#edosWorklogSection.datagrid-modified .hiddenIfModified {
+    display: none;
+}
+/* evidence práce výběr zaměstnance - aby popisek nebyl překrytý select boxem */
+#employeeSelector label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* seznam posledních odvedených prácí vedle formuláře pro zápis práce */
+ul#newestWorklogs {
+    padding-left: 1rem;
+}
+
+/* formulář Rezervace - aby kolem tlačítka Uložit nebyl zbytečný okraj */
+#ReservationForm .dx-popup-bottom.dx-toolbar .dx-toolbar-item,
+#ReservationForm .dx-toolbar-after {
+    margin: 0;
+    padding: 0;
+}
+/* formulář Rezervace - aby všechny labely od DX byly černé */
+#ReservationForm .dx-field-item-label-text {
+    color: #333;
+}
+
+body.Home .widgets.configMode {
+    background-color: #fff;
+}
+body.Home .widgets.configMode .widgetColumn {
+    background-color: #F1F5F8;
+    border: 1px dashed #B8C2CC;
+    margin: 20px;
+    padding: 10px;
+}
+/* aby mezi řádky nebyla zbytečně velká mezera */
+body.Home .widgets.configMode > .row + .row {
+    margin-top: -20px;
+}
+/* aby mezi dvěma sloupci nebyla zbytečně velká mezera */
+body.Home .widgets.configMode .col + .col .widgetColumn {
+    margin-left: -25px;
+}
+body.Home .widgets.configMode .dx-button.addWidget {
+    margin: 0 auto 10px auto;
+    display: block;
+    width: 125px;
+
+    background-color: #F1F5F8;
+    border: none;
+    color: #3490DC; /* blue base */
+}
+body.Home .widgets.configMode .dx-button.addWidget .dx-icon {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    color: #3490DC; /* blue base */
+}
+body.Home .widgets.configMode .dx-button.addWidget .dx-button-content span {
+    margin: 0 auto;
+}
+body.Home .widgets.configMode .dx-button.addWidget.dx-state-focused {
+    background-color: inherit;
+}
+body.Home .widgets.configMode .dx-button.addWidget.dx-state-hover,
+body.Home .widgets.configMode .dx-button.addWidget.dx-state-hover .dx-icon {
+    text-decoration: none;
+    color: #E3342F; /* red base */
+    background-color: inherit;
+}
