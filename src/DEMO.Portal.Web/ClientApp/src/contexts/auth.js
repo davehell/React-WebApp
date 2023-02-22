@@ -181,7 +181,7 @@ function AuthProvider({children}) {
     const ds = new DataSource({
       store: odata.Persons,
       filter: ["User.UserName", "=", username],
-      select: ["Id","PlainName","LastName"],
+      //select: ["Id","PlainName","LastName"],
       expand: [
       ]
     })
