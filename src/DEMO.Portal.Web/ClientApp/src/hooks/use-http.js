@@ -43,10 +43,12 @@ function useHttp(requestFunction, startWithLoading = false) {
         const responseData = await requestFunction(requestData);
         dispatch({ type: 'SUCCESS', responseData });
       } catch (error) {
-        dispatch({
-          type: 'ERROR',
-          errorMessage: error.message || t("serverError"),
-        });
+        if(error.name !== "AbortError") {
+          dispatch({
+            type: 'ERROR',
+            errorMessage: error.message || t("serverError"),
+          });
+        }
       }
     },
     [requestFunction]

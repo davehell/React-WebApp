@@ -151,6 +151,10 @@ body:not(.dx-viewport) {
     margin-bottom: 5px;
     color: #3490DC; /* blue base */
 }
+.section .head .actions .dx-button .dx-button-content,
+.dx-popup-title .dx-toolbar-before .dx-toolbar-button .dx-button .dx-button-content {
+    display: block;
+}
 .section .head .actions .dx-button .dx-button-content span,
 .dx-popup-title .dx-toolbar-before .dx-toolbar-button .dx-button .dx-button-content span {
     margin: 0 auto;

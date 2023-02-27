@@ -11,6 +11,8 @@ export const messages_cs = {
   loginRequired: "Vstup je možný pouze po přihlášení",
 
   //obecne
+  yes: "Ano",
+  no: "Ne",
   saved: "Uloženo",
   warning: "Upozornění",
   pageNotFoundTitle: "Stránka nebyla nalezena",
@@ -48,6 +50,15 @@ export const messages_cs = {
   dashboard: "Nástěnka",
   about: "O aplikaci",
   
+  //people
+  persons: "Osoby",
+  person: "Osoba",
+  id: "Id",
+  name: "Jméno",
+  dateInsert: "Vloženo",
+  newPerson: "Nová osoba",
+  personNamePlaceholder: "Zadejte jméno nové osoby",
+  editPerson: "Úprava osoby",
 
   ////////////
   posledni: ""

@@ -5,6 +5,10 @@ import Login from "../pages/Login";
 import Logout from "../pages/Logout";
 import LayoutBlank from "../components/layout/LayoutBlank";
 import LayoutHeader from "../components/layout/LayoutHeader";
+import Persons from "../pages/persons/Persons";
+import PersonDetail from "../pages/persons/PersonDetail";
+import PersonAdd from "../pages/persons/PersonAdd";
+import PersonEdit from "../pages/persons/PersonEdit";
 
 const routes = [
     {
@@ -33,7 +37,23 @@ const routes = [
         isPrivate: false,
         layout: LayoutHeader
     },
-
+    {
+        path: "/persons",
+        component: <Persons />
+    },
+    {
+        path: "/person/add",
+        component: <PersonAdd />
+    },
+    {
+        path: "/person/edit/:id",
+        component: <PersonEdit />
+    },
+    {
+        //routa musí být až poslední ze všech "person", aby názvy akcí (add, edit) měly přednost před parametrem id
+        path: "/person/:id",
+        component: <PersonDetail />
+    },
   ];
    
   export default routes;
