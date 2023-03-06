@@ -9,7 +9,9 @@ import Persons from "../pages/persons/Persons";
 import PersonDetail from "../pages/persons/PersonDetail";
 import PersonAdd from "../pages/persons/PersonAdd";
 import PersonEdit from "../pages/persons/PersonEdit";
-
+import FacilityDetail from "../pages/Facilities/FacilityDetail";
+import FacilityAdd from "../pages/Facilities/FacilityAdd";
+import FacilityEdit from "../pages/Facilities/FacilityEdit";
 const routes = [
     {
         path: "/*",
@@ -53,6 +55,17 @@ const routes = [
         //routa musí být až poslední ze všech "person", aby názvy akcí (add, edit) měly přednost před parametrem id
         path: "/person/:id",
         component: <PersonDetail />
+    },
+    {
+        path: "/facility/add",
+        component: <FacilityAdd />
+    },
+    {
+        path:"/facility/edit/:id",
+        component: <FacilityEdit />
+    },
+    {   path: "/facility/:id",
+        component: <FacilityDetail />
     },
   ];
    

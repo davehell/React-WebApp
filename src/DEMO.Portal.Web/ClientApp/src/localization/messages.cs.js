@@ -60,6 +60,14 @@ export const messages_cs = {
   personNamePlaceholder: "Zadejte jméno nové osoby",
   editPerson: "Úprava osoby",
 
+  //facilities
+  facilities: "Budovy",
+  newFacility: "Nová budova",
+  facilityNamePlaceholder: "Zadejte jméno budovy",
+  facilityDescriptionPlaceholder: "Zadejte popis budovy",
+  organizationUnit: "Organizace",
+  editFacility: "Úprava budovy",
+
   ////////////
   posledni: ""
 };
