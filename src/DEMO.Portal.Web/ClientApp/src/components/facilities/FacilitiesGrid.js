@@ -1,35 +1,33 @@
 import { Fragment, useCallback, useEffect, useState} from "react";
-import { useAjax } from "../../contexts/ajax";
-import useHttp from "../../hooks/use-http";
-import List from 'devextreme-react/list';
-import { convertPersonFromOData } from "../../model/person";
 import { convertFacilitiesFromOData } from "../../model/facilities";
-import { DataGrid } from "devextreme-react";
-
-
+//import { DataGrid } from "devextreme-react";
+import DataGrid from 'devextreme-react/data-grid';
+import DataSource from "devextreme/data/data_source";
+import { useAuth } from '../../contexts/auth';
 
 export default function FacilitiesGrid({onSelected}){
-
-    const {ajaxAction} = useAjax();
+    const { OData } = useAuth();
     const [dataSource, setDataSource] = useState();
     
-    const fetchData = useCallback(async () => {
-        return await ajaxAction("Facilities", null, "");
-    }, [ajaxAction]);
-    const {sendRequest: loadList, isHttpLoading, httpResponse} = useHttp(fetchData, true);
+    const getDataSource = useCallback(() => {
+        const ds = new DataSource({
+          store: OData.Facilities,
+          select: ["Id", "Name"],
+          sort: [ "Name" ],
+          paginate: false,
+          map: function (facility) {
+            let model = convertFacilitiesFromOData(facility);
+            return model;
+          }
+        });
+        return ds;
+      }, [OData]);
 
-    useEffect(() => {
-        loadList();
-    }, [loadList]);
-
-    useEffect(() => {
-        if(isHttpLoading === false){
-            if(httpResponse?.value){
-                let ds = httpResponse.value.map(data => convertFacilitiesFromOData(data));
-                setDataSource(ds);
-            }
-        }
-    }, [isHttpLoading, httpResponse]);
+      //při startu načíst data
+      useEffect(() => {
+        const ds = getDataSource();
+        setDataSource(ds);
+      }, [ getDataSource]);
 
     const onRowClick = useCallback((e) =>{
         if(onSelected) {
@@ -39,7 +37,10 @@ export default function FacilitiesGrid({onSelected}){
 
     return(
         <Fragment>
-            <DataGrid dataSource={dataSource} onRowClick={onRowClick}/>
+            <DataGrid
+                dataSource={dataSource}
+                onRowClick={onRowClick}
+                />
             
         </Fragment>
     )

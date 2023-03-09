@@ -12,11 +12,9 @@ export default function AddFacilityForm({data, onSubmit}){
     const nameInput = useDxInput(data?.Name)
     const nameTextBox = useRef(null);
     const descriptionInput = useDxInput(data?.Description);
-    const descriptionTextBox = useRef(null);
-    const organizationUnitLookup = useRef(null);
     const {ajaxAction} = useAjax();
     const [dataSource, setDataSource] = useState();
-    const organizationUnitInput  = useDxInput();
+    const organizationUnitInput  = useDxInput(data?.OrganizationUnitRefId);
 
     useEffect(() => {
         if(nameTextBox && nameTextBox.current){
@@ -43,23 +41,13 @@ export default function AddFacilityForm({data, onSubmit}){
         }
     }, [isHttpLoading, httpResponse, data]);
 
-    useEffect(() => {
-        if(dataSource && data){
-            let oi = dataSource.find(item => item.Id === data?.OrganizationUnitRefId);
-            organizationUnitInput.setInputValue(oi);
-        }
-    }, [dataSource, data, organizationUnitInput.setInputValue]);
-
-
     const handleSubmit = useCallback((e) => {
-        if(!nameInput.value || !organizationUnitInput.value){
         e.preventDefault();
-        }
         
         let data = {
             Name: nameInput.value,
             Description: descriptionInput.value,
-            OrganizationUnitRefId: organizationUnitInput.value.Id
+            OrganizationUnitRefId: organizationUnitInput.value
         };
         onSubmit(data);
     }, [nameInput, descriptionInput, organizationUnitInput, onSubmit]);
@@ -88,7 +76,6 @@ export default function AddFacilityForm({data, onSubmit}){
                     <div className="col-lg-10">
                         <TextBox
                         {...descriptionInput}
-                        ref={descriptionTextBox}
                         descriptionInput
                         placeholder={t("facilityDescriptionPlaceholder")}>
                             
@@ -102,9 +89,11 @@ export default function AddFacilityForm({data, onSubmit}){
                     <div className="col-lg-10">
                         <Lookup 
                         {...organizationUnitInput}
-                        ref={organizationUnitLookup}
                         dataSource={dataSource} 
                         organizationUnitInput
+                        valueExpr={"Id"}
+                        displayExpr={"Name"}
+
                         >
                             <Validator>
                                 <RequiredRule />

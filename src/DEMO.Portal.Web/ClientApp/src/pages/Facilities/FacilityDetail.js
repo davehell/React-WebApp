@@ -32,9 +32,6 @@ export default function FacilityDetail(){
     }, [id, loadDetail]);
 
     useEffect(() => {
-        if(isHttpLoading){
-            setFacility(null);
-        }
         if(httpResponse){
             let model = convertFacilitiesFromOData(httpResponse);
             setFacility(model);

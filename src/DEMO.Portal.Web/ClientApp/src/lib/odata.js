@@ -4,6 +4,8 @@ import { getHttpHeaders } from './common';
 //seznam všech používaných OData entit
 const entities = [
     "Persons",
+    "Facilities",
+    "OrganizationUnits",
     "Users"
 ];
 
