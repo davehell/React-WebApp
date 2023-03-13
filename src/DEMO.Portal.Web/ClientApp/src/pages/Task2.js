@@ -28,21 +28,14 @@ export default function Task2() {
     }
     if (httpResponse) {
       successDialog(t('saved'))
+      setRefreshGrid(Date.now());
+      setSelectedFacility(httpResponse);
     }
   }, [httpError, httpResponse]);
 
   const onSubmit = useCallback(async (data) => {
-    if (data.Description) {
-      postItem(data);
-      let model = {
-        Id: selectedFacility.Id,
-        Name: selectedFacility.Name,
-        Description: data.Description
-      };
-      setRefreshGrid(Date.now());
-      setSelectedFacility(model);
-    }
-  }, [postItem, setRefreshGrid, setSelectedFacility, selectedFacility]);
+    postItem(data);
+  }, [postItem]);
 
   return (
     <Fragment>
