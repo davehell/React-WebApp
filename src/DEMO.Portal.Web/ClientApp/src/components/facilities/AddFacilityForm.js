@@ -76,7 +76,6 @@ export default function AddFacilityForm({data, onSubmit}){
                     <div className="col-lg-10">
                         <TextBox
                         {...descriptionInput}
-                        descriptionInput
                         placeholder={t("facilityDescriptionPlaceholder")}>
                             
                             <Validator>

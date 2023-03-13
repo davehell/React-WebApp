@@ -1,31 +1,36 @@
 import { Button, TextBox, Validator } from "devextreme-react"
 import { RequiredRule } from "devextreme-react/data-grid";
-import { Fragment, useCallback, useEffect, useRef } from "react"
-import { useDxInput } from "../../hooks/useDxInput"
+import { Fragment, useCallback, useEffect, useRef, useState } from "react"
 import { t } from "../../localization/i18n"
 import Section from "../UI/Section";
 
-
 export default function Task2EditForm({ data, onSubmit }) {
-  const descriptionInput = useDxInput(data?.Description);
   const descriptionTextBox = useRef(null);
+  const [description, setDescription] = useState();
 
+  useEffect(() => {
+    setDescription(data?.Description);
+  }, [data]);
+  
   useEffect(() => {
     if (descriptionTextBox && descriptionTextBox.current) {
       descriptionTextBox.current.instance.focus();
     }
-    if (data) {
-      descriptionInput.setInputValue(data.Description);
-    }
-  }, [descriptionTextBox, data, descriptionInput.setInputValue]);
+
+  }, [descriptionTextBox]);
 
   const handleSubmit = useCallback((e) => {
     e.preventDefault();
+
     let model = {
-      Description: descriptionInput.value
+      Description: description
     };
     onSubmit(model);
-  }, [onSubmit, descriptionInput]);
+  }, [onSubmit, description]);
+
+  const onValueChanged = useCallback((e) => {
+    setDescription(e.value);
+  }, []);
 
   if (!data) {
     return null;
@@ -38,8 +43,8 @@ export default function Task2EditForm({ data, onSubmit }) {
           <div className="form-group row">
             <label className="col-form-label col-lg-5">{t("description")}</label>
             <TextBox
-              {...descriptionInput}
-              descriptionInput
+              value={description}
+              onValueChanged={onValueChanged}
               ref={descriptionTextBox}
             >
               <Validator>
@@ -53,7 +58,7 @@ export default function Task2EditForm({ data, onSubmit }) {
                 className="btn btn-primary"
                 useSubmitBehavior={true}
                 text={t("save")}
-                disabled={!descriptionInput.value || descriptionInput.value === data?.Description}
+                disabled={!description ? true : false}
               />
             </div>
           </div>

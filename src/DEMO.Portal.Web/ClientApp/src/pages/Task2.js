@@ -51,10 +51,12 @@ export default function Task2() {
           <div className="col-lg-4"> 
             <Task2Grid onRowClick={onRowClick} refresh={refreshGrid} />
           </div>
+          {selectedFacility &&
           <div className="col-lg-5">
             <Task2Detail data={selectedFacility} />
             <Task2EditForm data={selectedFacility} onSubmit={onSubmit} />
           </div>
+          }
         </div>
       </Section>
     </Fragment>
