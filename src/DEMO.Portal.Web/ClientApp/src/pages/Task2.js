@@ -48,8 +48,13 @@ export default function Task2() {
     <Fragment>
       <Section title={t("task2")}>
         <div className="row">
-          <div className="col-lg-4"> <Task2Grid onRowClick={onRowClick} refresh={refreshGrid} /> </div>
-          <div className="col-lg-5"> <Task2Detail data={selectedFacility} /> <Task2EditForm data={selectedFacility} onSubmit={onSubmit} /> </div>
+          <div className="col-lg-4"> 
+            <Task2Grid onRowClick={onRowClick} refresh={refreshGrid} />
+          </div>
+          <div className="col-lg-5">
+            <Task2Detail data={selectedFacility} />
+            <Task2EditForm data={selectedFacility} onSubmit={onSubmit} />
+          </div>
         </div>
       </Section>
     </Fragment>

@@ -44,21 +44,22 @@ export default function Task2Grid({ onRowClick, refresh }) {
   }, [onRowClick]);
 
   //Pokus o rowRender
-  /*   const gridRowRender = (rowData) => {
-          return (
-              <Fragment>
-                  <tr>
-                      <td>{rowData.data.Id}</td>
-                      <td>{rowData.data.Name}</td>
-                  </tr>
-                  <tr>
-                      <td>
-                          {rowData.data.Description}
-                      </td>
-                  </tr>
-              </Fragment>
-          );
-      };*/
+  const gridRowRender = (rowData) => {
+    return (
+      <tr>
+        <td colSpan={1}>
+        <dl className='row'>
+          <dt className="col-6">Id</dt>
+          <dd className="col-6">{rowData.data.Id}</dd>
+          <dt className="col-6">Name</dt>
+          <dd className="col-6">{rowData.data.Name}</dd>
+          <dt className="col-6">Description</dt>
+          <dd className="col-6">{rowData.data.Description}</dd>
+        </dl>
+        </td>
+      </tr>
+    );
+  };
 
 
   return (
@@ -70,14 +71,17 @@ export default function Task2Grid({ onRowClick, refresh }) {
         focusedRowEnabled={true}
         showBorders={true}
         ref={dataGrid}
-        //  dataRowRender={gridRowRender}
+        dataRowRender={gridRowRender}
         columnWidth={200}
       >
         <HeaderFilter visible={false} />
         <FilterRow visible={false} />
         <Sorting mode="none" />
+        <Column dataField="Id" visible={false} />
+{/* 
         <Column dataField="Id" data />
         <Column dataField="Name" caption={t("name")} allowSorting={true} />
+ */}
       </DataGrid>
     </Fragment>
   );
