@@ -9,9 +9,9 @@ import Persons from "../pages/persons/Persons";
 import PersonDetail from "../pages/persons/PersonDetail";
 import PersonAdd from "../pages/persons/PersonAdd";
 import PersonEdit from "../pages/persons/PersonEdit";
-import FacilityDetail from "../pages/facilities/FacilityDetail";
-import FacilityAdd from "../pages/facilities/FacilityAdd";
-import FacilityEdit from "../pages/facilities/FacilityEdit";
+import FacilityDetail from "../pages/Facilities/FacilityDetail";
+import FacilityAdd from "../pages/Facilities/FacilityAdd";
+import FacilityEdit from "../pages/Facilities/FacilityEdit";
 import Task2 from "../pages/Task2";
 const routes = [
     {
